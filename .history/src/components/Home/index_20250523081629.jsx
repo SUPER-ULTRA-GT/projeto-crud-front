@@ -2,15 +2,13 @@ import Main from "../Main";
 import Modal from "../Modal";
 import Button from "../Button";
 import Tasks from "../Tasks";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { API } from "../../services/api";
 
 const Home = () => {
-    const [tasks, setTasks] = useState([]);
     useEffect(() => {
         API.get("/tarefas")
-            .then(res => setTasks((res.data)))
-    }, [])
+    })
 
     return (
         <Main>
@@ -21,7 +19,7 @@ const Home = () => {
                 />
                 <Modal />
             </div>
-            <Tasks listOfTasks={tasks}/>
+            <Tasks/>
         </Main>
     );
 }

@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
         API.get("/tarefas")
             .then(res => setTasks((res.data)))
-    }, [])
+    })
 
     return (
         <Main>
@@ -21,7 +21,7 @@ const Home = () => {
                 />
                 <Modal />
             </div>
-            <Tasks listOfTasks={tasks}/>
+            <Tasks/>
         </Main>
     );
 }

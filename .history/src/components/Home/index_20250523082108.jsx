@@ -21,7 +21,7 @@ const Home = () => {
                 />
                 <Modal />
             </div>
-            <Tasks listOfTasks={tasks}/>
+            <Tasks listOfTasks={}/>
         </Main>
     );
 }
